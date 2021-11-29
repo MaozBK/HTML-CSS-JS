@@ -1,0 +1,88 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="css/Main.css">
+    <style>
+        body {
+            background-image: url("photos/WebPhotos/contactpagephoto.jpg"); /* adding background image*/
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="topnav">
+        <a href="Index.html">Home</a>
+        <a href="Albums.html">Albums</a>
+        <a href="About.html">About </a>
+        <a href="Contact.html">Contact-Us </a>
+        <a href="Register.html">Register </a>
+    </div>
+    <form name="registerform" action="mailto:maoz170@gmail.com" onsubmit="return validate()">
+        <br /><br />
+        <h1><u> Register</u></h1>
+        <h2> For Our weekly Newsletter.. </h2>
+        <table align="center" cellpadding="1" border="1">
+            <tr>
+                <td text-align:center;>
+                    <input type="text" placeholder="First Name" size="40"><br><br>
+                    <input type="text" placeholder="Last name" size="40"><br> <br>
+                    <input type="text" name="email" placeholder="Email" size="40"><br> <br>
+                    <input type="text" placeholder="Company Name (optional)" size="40"> <br><br>
+                    <input type="text" placeholder="Area Code" size="10">
+                    <input type="text" placeholder="Primary Phone" size="29"><br><br>
+                    <input type="text" placeholder="Street Address" size="44"><br><br>
+                    <input type="text" placeholder="Apt, Suite, Bldg, Gate Code (optional)" size="44"><br><br>
+                    <input type="text" placeholder="City" size="15">&nbsp;
+                    <input type="text" placeholder="State" size="12">&nbsp;
+                    <input type="text" placeholder="pin" size="7"><br><br>
+
+
+                    <h2>Payment Information</h2>
+                    Credit Card Number:<br><br>
+
+                    <input type="text" name="digits" placeholder="****" size="5" maxlength="4">&nbsp;
+                    <input type="text" name="digits" placeholder="****" size="5" maxlength="4">&nbsp;
+                    <input type="text" name="digits" placeholder="****" size="5" maxlength="4">&nbsp;
+                    <input type="text" name="digits" placeholder="****" size="5" maxlength="4"><br><br>
+                    Expiration Date: <input type="text" name="Expiration" placeholder="MM" size="5" maxlength="2">&nbsp; / &nbsp;
+                    <input type="text" name="Expiration" placeholder="YYYY" size="5" maxlength="4">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="digits" placeholder="CVC" size="9" maxlength="3"><br><br>
+                    <input type="submit" id="submit-button" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" name="reset1" value="Reset">
+
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center" ;>
+                    <img src="Photos/CreditCard.jpg" width="241" height="36" alt="Google">
+                </td>
+            </tr>
+        </table>
+
+        <br /><br /><br /><br />
+        <footer>
+            <p1>
+                The Official International Queen Fan Club | P.O.Box 77 | Poria - Neve Oved | Harakafot St. 48 | <a align="center" href="tel:+972528341543">(+972)834-1543</a>
+            </p1>
+        </footer>
+    </form>
+
+    <script>
+        function validate() {
+            var email = document.registerform.email.value;
+            if (email == "" || email == null) {
+                alert("You Forgot to Enter Your Email");
+                return false;
+            }
+
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

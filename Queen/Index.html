@@ -1,0 +1,156 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/Main.css">
+    <style>
+        /* adding background image*/
+        body {
+            background-image: url("photos/WebPhotos/Backgroundalbums2.jpg");
+        }
+
+        /*Transparent button with border line for Time and Date function*/
+        button {
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="Index.html">Home</a>
+        <a href="Albums.html">Albums</a>
+        <a href="About.html">About </a>
+        <a href="Contact.html">Contact-Us </a>
+        <a href="Register.html">Register </a>
+    </div>
+
+    <br /><br />
+
+    <h1><u>Welcome to Official Queen fan Club</u></h1>
+    <p>
+        The fan club has been in existence for 44 years this year - 2018 -
+        and was set up to cope with the huge demand for information on Queen.
+        That demand is still there, and the fan club has gone from strength to strength.
+        We still provide full colour, printed magazines,downloads, exclusive members only
+        deals and much more. I have had the pleasure of being in charge of the fan club for
+        35 of those years!
+    </p>
+
+
+    <p>
+        We organize many events for members, including our annual Convention which
+        takes place over three days... and it's nothing but Queen from dawn til dusk!
+        The band in early seventies...We also organize regular parties to celebrate Freddie's
+        birthday in September, Christmas parties and a host of other fun things...a visit to
+        Montreux to see Freddie's statue  perhaps? A Trip to Holland to attend their fan club event?
+    </p>
+
+    <p>
+        Did you miss that ticket to Wembley in 1986? Could not get through
+        for a Freddie Tribute ticket? Missed out on the Queen & Paul Rodgers
+        tickets? Wanted to attend a We Will Rock You musical premiere somewhere
+        in the  world?  Wanted good seats for Queen & Adam Lambert? We had tickets
+        for all of these things and more for our members! Just as we secured tickets
+        for Queen shows in the past, and will do for any planned for the future!
+    </p>
+
+    <p>
+        The fan club is like a extended family for all Queen fans - our Members
+        Only website has a friendly forum and chat room, and all our members are happy
+        to share their love of all things Queen with everyone!
+    </p>
+
+    <span>  The Band:  </span>
+    <div id="pesonalFavorite"> </div>
+
+    <br /><br />
+
+    <script>
+        class Person {
+            constructor(firstName, lastName, age, mustacheOwner, role) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.mustacheOwner = mustacheOwner;
+                this.role = role;
+
+            }
+        }
+
+        var freddie = new Person("Freddie", "Mercury", 50, true, 'Singer');
+        var john = new Person("John", "Deacon", 48, false, 'Drumer');
+        var brian = new Person("Brian", "May", 50, false, 'Electric Guitar');
+        var roger = new Person("Roger", "Taylor", 48, true, 'Classic Guitar');
+
+        var band = [freddie, john, brian, roger]
+
+        for (var i = 0; i <= band.length-1; i++) {
+            var el = document.createElement('DIV')
+            var text = "name: " + band[i].firstName + ' ' + band[i].lastName + ", role: " + band[i].role
+            el.innerHTML = text
+            document.getElementById("pesonalFavorite").appendChild(el)
+        }
+    </script>
+	
+    <br />
+    <br />
+	
+    <audio controls>
+        <source src="backgroundMusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="lottery">
+        Click here and try to win a free ticket
+        <button id="enterLotteryBtn">Enter Lottery</button>
+        <div id="lottery-result"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="buy-tickets">
+        <span>Price per ticket:</span><span id="ticket-price"></span>
+        <div>
+            How much tickets would you like?
+            <input id="orderTickets" type="number" min="0" max="100" />
+        </div>
+        <div>
+            You will be charged:
+            <span id="orderSum"></span>
+        </div>
+        <button id="order-tickets-btn">Order Now</button>
+        <div id="orderSummary">
+
+        </div>
+    </div>
+
+    <footer>
+        <p1>
+            The Official International Queen Fan Club | P.O.Box 77 | Poria - Neve Oved | Harakafot St. 48 | <a align="center" href="tel:+972528341543">(+972)834-1543</a>
+        </p1>
+
+        <p id="time"></p>
+
+    </footer>
+    <script src="js/buyTickets.js"></script>
+    <script>
+        // time on the bottom of the page to show by seconds in function myTimer()
+        var myVar = setInterval(myTimer, 1000);
+
+        function myTimer() {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("time").innerHTML = t;
+        }
+    </script>
+
+</body>
+
+</html>

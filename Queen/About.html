@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <link rel="stylesheet" href="css/Main.css">
+
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-image: url(Photos/Albums-Side-Banner5.JPG), url(Photos/Albums-Side-Banner5.JPG);
+            background-repeat: repeat-y,repeat-y;
+            background-position: right top,left top;
+        }
+    </style>
+
+</head>
+
+<body ng-app="myApp2" ng-controller="myCtrl2">
+    <a name="Top"> </a>
+
+    <div class="topnav">
+        <a href="Index.html">Home</a>
+        <a href="Albums.html">Albums</a>
+        <a href="About.html">About </a>
+        <a href="Contact.html">Contact-Us </a>
+        <a href="Register.html">Register </a>
+
+    </div>
+    <br /><br />
+    <h1> <u>About Queen</u></h1>
+    <h2> A little bit of History</h2>
+
+    <img src="Photos/AboutPhoto1.png" width="400" style="float:left;">
+    <p>
+        {{firstPart}}
+    </p>
+
+    <script>
+        var app = angular.module("myApp2", []);
+        app.controller("myCtrl2", function ($scope) {
+            $scope.firstPart = 
+            "Queen are a British rock band formed in London in 1970. Their classic line-up was"+
+        "Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals),"+
+        "Roger Taylor (drums, vocals) and John Deacon (bass guitar). Their earliest works were"+
+        "influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into"+
+        "more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.";
+            
+        });
+    </script>
+    <!--Button to show more from "About Us page -->
+    <p> If you want to see more, click <button id="btn"> show more</button></p>
+
+    <div id="myDIV" style="display:none">
+        <p id="paragraph">
+            The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions",
+            which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium
+            rock bands in the world. "Another One Bites the Dust" (1980) became their best-selling single, while their
+            1981 compilation album Greatest Hits is the best-selling album in the UK and is certified eight times platinum
+            in the US. Their performance at the  <a href="https://www.youtube.com/watch?v=TkFHYODzRTs&t=0s" target="_blank">1985 Live Aid concert</a>
+            has been ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at
+            Knebworth, England. Click  <a href="https://www.youtube.com/watch?v=iV7XvG7fgm0" target="_blank"><b>Here</b></a>  if you want to check the full concert.
+        </p>
+
+        <p>
+            <img src="Photos/AboutPhoto2.jpg" width="400" style="float:right; padding-top: 15px; padding-left: 20px">
+            Throughout the years, no other rock band has conquered the world and the charts like Queen.
+            Starting in the early seventies and throughout the eighties, Freddie Mercury, Brian May, Roger
+            Taylor and John Deacon have written hit after hit. From their first number one single, Bohemian
+            Rhapsody, to their stadium anthems, "We Will Rock You" and "We Are the Champions", their music has
+            reigned across the radio airwaves from Great Britain and Europe to the United States and Australia.
+            They have reached audiences in South America (where they were the first rock band to embark on a stadium
+            tour) and in Hungary (where on their Magic Tour, they played to a sell out crowd, while still under the Iron
+            Curtain). As the nineties approached, Queen focused their energies from touring to recording. The Miracle and
+            Innuendo proved to be some of Queen's finest moments. They began to pick up new fans across the world, and according
+            to many critics, were returning to the glory days of A Night at the Opera and News of the World. Unfortunately, on November 24, 1991,
+            that new found steam came to a halt, as Freddie Mercury passed away, due to complications from AIDS.
+        </p>
+        <br><br>
+        <img src="Photos/aboutphoto3.jpg" width="400" style="float:left; padding-right: 15px; padding-bottom: 20px">
+
+        <p>
+            Estimates of Queen's record sales range from 170 million to 300 million records, making
+            them one of the world's best-selling music artists. In 1990, Queen received the Brit Award
+            for Outstanding Contribution to British Music from the British Phonographic Industry. They
+            were inducted into the Rock and Roll Hall of Fame in 2001. Each member has composed hit singles,
+            and all four were inducted into the Songwriters Hall of Fame in 2003. In 2005, Queen received the Ivor
+            Novello Award for Outstanding Song Collection from the British Academy of Songwriters, Composers, and Authors.
+            In 2018, they were presented the Grammy Lifetime Achievement Award.
+        </p>
+
+
+        <!--Get Element by ID last paragraph, script is under-->
+        <p id="lastP"></p>
+
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            func();
+        });
+        function func() {
+            document.getElementById("myDIV").style.display = 'block';
+        }
+    </script>
+
+    <!--here are some Template strings using \ to go to next line + adding Quataions (") after \ as well  -->
+    <script>
+        document.getElementById("lastP").innerHTML =
+            "In 1991, he died of bronchopneumonia - a complication of AIDS, and Deacon retired in 1997. \
+            Since 2004, May and Taylor have toured under the \"Queen + name with vocalists Paul Rodgers and Adam Lambert.\
+            Although Freddie Mercury has left us, it will be a long time before his legacy and the music of Queen will be forgotten\""
+    </script>
+
+    <br><br>
+    <audio controls autoplay>
+        <source src="Music/backgroundMusic1.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer>
+        <p1>
+            The Official International Queen Fan Club | P.O.Box 77 | Poria - Neve Oved | Harakafot St. 48 | <a align="center" href="tel:+972528341543">(+972)834-1543</a>
+        </p1>
+    </footer>
+    <a href="#Top"> Go Back to the Top </a><br>
+
+</body>
+</html>

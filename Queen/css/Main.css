@@ -1,0 +1,42 @@
+body {
+    background: #ffffff; /* background color of all pages, Grey*/
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.28); /*Shadow of the content page and colors of the shadow and measurment of transparency*/
+    color: #000000; /* color of text in all website, Black*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /*Font-Family= font style from left to right of the website*/
+    font-size: 20px; /*Size of the font in all pages*/
+    line-height: 1.5; /*Spaces between lines written on all pages*/
+    margin: auto; /* Spaces in the cody area that on auto*/
+    max-width: 800px; /*Max width of the content in the center of the page from left to right */
+    padding: 5px 32px 100px;
+}
+
+.topnav {
+    overflow: visible; /*type menu */
+}
+
+    .topnav a {
+        float: left;
+        color: #ff6a00; /* color of the menu written "Orange*/
+        text-align: center; /*Align the menu text in the center*/
+        padding: 14px 20px; /*top, right, bottom, left menu arrangement */
+        text-decoration: none; /*No Special effects on the nav Bar*/
+        font-size: 20px; /* font size of the menu Nav Bar */
+        align-content: center;
+        text-align: center;
+    }
+
+        .topnav a:hover {
+            background-color: aliceblue; /* hover color */
+            color: black; /*text color when hovering*/
+        }
+
+h1 {
+    text-align: center; /*Aligning h1 tags to be center page.*/
+}
+
+p1 {
+    text-align: center;
+    color: blue;
+    position: page;
+    font-size: 15px
+}

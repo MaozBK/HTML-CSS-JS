@@ -1,0 +1,388 @@
+﻿<!doctype html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <link rel="stylesheet" href="css/Main.css">
+
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-image: url(Photos/Albums-Side-Banner4.JPG), url(Photos/Albums-Side-Banner4.JPG);
+            background-repeat: repeat-y,repeat-y;
+            background-position: right top,left top;
+        }
+    </style>
+</head>
+
+<!--Angular usage first album -->
+<body ng-app="myApp" ng-controller="myCtrl">
+    <a name="Top"> </a>
+
+    <div class="topnav">
+        <a class="active" href="Index.html">Home</a>
+        <a href="Albums.html">Albums</a>
+        <a href="About.html">About </a>
+        <a href="Contact.html">Contact-Us </a>
+        <a href="Register.html">Register </a>
+
+    </div>
+    <br /><br />
+    
+    <h1><u>Albums & Playlists</u></h1>
+
+    <div style=float:right;>
+        <!--Angular usage here The ng-repeat directive repeats a set of HTML, a given number of times.
+
+    The set of HTML will be repeated once per item in a collection.
+
+    The collection must be an array or an object. -->
+        <b>{{alnumName}}</b>{{year}} <br>
+        <img src="photos/Albums/Queen02.jfif"><br>
+        <p id="Playlist"></p>
+        <li ng-repeat="x in songs">{{x}}</li>
+        <br />
+
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myCtrl", function ($scope) {
+                $scope.alnumName = "2. Queen II";
+                $scope.year = "(Elektra 1974)"
+                $scope.songs = [
+                    "Brighton Rock",
+                    "Killer Queen",
+                    "Tenement Funster",
+                    "Flick Of The Wrist",
+                    "Lily Of The Valley",
+                    "Now I'm Here",
+                    "In The Lap Of The Gods",
+                    "Stone Cold Crazy",
+                    "Dear Friends",
+                    "Misfire",
+                ]
+            });
+        </script>
+
+
+        <b>4. A Night At The Opera </b> (Elektra 1975<br>
+        <img src="photos/Albums/Queen04.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>Death On Two Legs </li>
+            <li>Lazing On A Sundy Afternoon </li>
+            <li>I'm In Love With My Car </li>
+            <li>You're My Best Friend </li>
+            <li>'39 </li>
+            <li>Sweet Lady </li>
+            <li>Seaside Rendezvous </li>
+            <li>The Prophet's Song </li>
+            <li>Love Of My Life </li>
+            <li>Good Company </li>
+            <li>Bohemian Rhapsody </li>
+            <li>God Save The Queen </li>
+        </ol>
+
+        <b>6. News Of The World</b> (Elektra 1977)<br>
+        <img src="photos/Albums/Queen06.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>We Will Rock You </li>
+            <li>We Are the Champions </li>
+            <li>Sheer Heart Attack </li>
+            <li>All Dead, All Dead </li>
+            <li>Spread Your Wings </li>
+            <li>Fight From The Inside </li>
+            <li>Get Down, Make Love </li>
+            <li>Sleeping on the Sidewalk</li>
+            <li>Who Needs You </li>
+            <li>It's Late </li>
+            <li>My Melancholy Blues </li>
+        </ol>
+
+        <b>A. Live Killers </b> (Elektra 1979)<br>
+        <img src="photos/Albums/Queen07a.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>We Will Rock You </li>
+            <li>Let Me Entertain You </li>
+            <li>Death On Two Legs </li>
+            <li>Killer Queen</li>
+            <li>Bicycle Race </li>
+            <li>I'm In Love With My Car </li>
+            <li>Get Down Make Love </li>
+            <li>You're My Best Friend </li>
+            <li>Now I'm Here </li>
+            <li>Dreamers Ball </li>
+            <li>Love Of My Life </li>
+            <li>'39</li>
+            <li>Keep Yourself Alive </li>
+            <li>Don't Stop Me Now </li>
+            <li>Spread Your Wings </li>
+            <li>Brighton Rock </li>
+            <li>Bohemian Rhapsody </li>
+            <li>Tie Your Mother Down </li>
+            <li>Sheer Heart Attack </li>
+            <li>We Will Rock You </li>
+            <li>We Are The Champions </li>
+            <li>God Save The Queen </li>
+        </ol>
+
+        <b>9. Flash ordon</b> (Elektra 1981)<br>
+        <img src="photos/Albums/Queen09.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>Flash's Theme</li>
+            <li>In The Space Capsule </li>
+            <li>Ming's Theme </li>
+            <li>The Ring </li>
+            <li>Football Fight </li>
+            <li>In The Death Cell </li>
+            <li>Execution Of Flash </li>
+            <li>The Kiss </li>
+            <li>Arboria </li>
+            <li>Escape From The Swamp </li>
+            <li>Flash To The Rescue </li>
+            <li>Vultan's Theme </li>
+            <li>Battle Theme </li>
+            <li>The Wedding March </li>
+            <li>Marriage Of Dale And Ming </li>
+            <li>Crash Dive On Mingo City </li>
+            <li>Flash's Theme Reprise </li>
+            <li>The Hero </li>
+        </ol>
+
+        <b>11. The Works</b> (Elektra 1984)<br>
+        <img src="photos/Albums/Queen11.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>Radio Ga Ga </li>
+            <li>Tear It Up </li>
+            <li>It's A Hard Life </li>
+            <li>Man On The Prowl </li>
+            <li>Machines </li>
+            <li>I Want To Break Free </li>
+            <li>Keep Passing The Open Windows </li>
+            <li>Hammer To Fall </li>
+            <li>Is This The World We Created?</li>
+        </ol>
+
+        <b>B. Live Magic </b> <br>
+        <img src="photos/Albums/Queen12a.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>One Vision 			</li>
+            <li>Tie Your Mother Down </li>
+            <li>Seven Seas Of Rhye </li>
+            <li>A Kind Of Magic </li>
+            <li>Under Pressure </li>
+            <li>Another One Bites The Dust </li>
+            <li>I Want To Break Free </li>
+            <li>Is This The World We Created?</li>
+            <li>Bohemian Rhapsody </li>
+            <li>Hammer To Fall </li>
+            <li>Radio Ga Ga </li>
+            <li>We Will Rock You </li>
+            <li>Friends Will Be Friends </li>
+            <li>We Are The Champions </li>
+            <li>God Save The Queen </li>
+        </ol>
+
+        <b>14. Innuendo</b> (Elektra 1991)<br>
+        <img src="photos/Albums/Queen14.jfif"><br>
+        Playlist:
+
+        <ol>
+            <li>Innuendo </li>
+            <li>I'm Going Slightly Mad </li>
+            <li>Headlong </li>
+            <li>I Can't Live With You </li>
+            <li>Don't Try So Hard </li>
+            <li>Ride The Wild Wind </li>
+            <li>All God's People </li>
+            <li>These Are The Days Of Our Lives </li>
+            <li>Delilah </li>
+            <li>The Hitman </li>
+            <li>Bijou </li>
+            <li>The Show Must Go On </li>
+        </ol>
+    </div>
+
+<!-- Using Loop For/of x printing songs -->
+    <b>1. Queen</b> (Elektra 1973)<br>
+    <img src="photos/Albums/Queen01.jfif"><br>
+    Playlist:<br>
+
+    <script>
+        var songs = ['Keep Yourself Alive',
+            'Doing All Right ',
+            'Great King Rat',
+            'My Fairy King',
+            'Liar',
+            'The Night Comes Down',
+            'Modern Times Rock\'n\' Roll',
+            'Son And Daughter',
+            'Jesus',
+            'Seven Seas of Rhye',];
+
+        var x;
+        for (x of songs) {
+            document.write(x + "<br >");
+        }
+    </script><br>
+
+    <b>3. Sheer Heart Attack </b> (Elektra 1974)<br>
+    <img src="photos/Albums/Queen03.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>lf Alive </li>
+        <li>Doing All Right </li>
+        <li>Great King Rat  </li>
+        <li>My Fairy King  </li>
+        <li>Liar (66 — Mercury)</li>
+        <li>The Night Comes Down </li>
+        <li>Modern Times Rock 'n' Roll </li>
+        <li>Son And Daughter </li>
+        <li>Jesus </li>
+        <li>Seven Seas of Rhye </li>
+    </ol>
+
+    <b>5. A Day At The Races</b> (Elektra 1976)<br>
+    <img src="photos/Albums/Queen05.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>Tie Your Mother Down </li>
+        <li>You Take My Breath Away </li>
+        <li>Long Away (31— May)</li>
+        <li>The Millionaire Waltz </li>
+        <li>You And I </li>
+        <li>Somebody To Love </li>
+        <li>White Man </li>
+        <li>Good Old Fashioned Lover Boy </li>
+        <li>Drowse </li>
+        <li>Teo Torriatte (Let Us Cling Together) </li>
+    </ol>
+
+    <b>7. Jazz</b> (Elektra 1978)<br>
+    <img src="photos/Albums/Queen07.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>Mustapha </li>
+        <li>Fat Bottomed Girls </li>
+        <li>Jealousy </li>
+        <li>Bicycle Race  </li>
+        <li>If You Can't Beat Them </li>
+        <li>Let Me Entertain You </li>
+        <li>Dead On Time </li>
+        <li>In Only Seven Days </li>
+        <li>Dreamers Ball </li>
+        <li>Fun It </li>
+        <li>Leaving Home Ain't Easy </li>
+        <li>Don't Stop Me Now </li>
+        <li>More Of That Jazz </li>
+    </ol>
+
+    <b>8. The Game </b> (Elektra 1980)<br>
+    <img src="photos/Albums/Queen08.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>Play The Game</li>
+        <li>Dragon Attack </li>
+        <li>Another One Bites the Dust  </li>
+        <li> Need Your Loving Tonight </li>
+        <li>Crazy Little Thing Called Love </li>
+        <li>Rock It (Prime Jive) </li>
+        <li>Don't Try Suicide </li>
+        <li>Sail Away Sweet Sister </li>
+        <li>Coming Soon </li>
+        <li>Save Me </li>
+    </ol>
+
+    <b>10. Hot Space</b> (Elektra 1982)<br>
+    <img src="photos/Albums/Queen10.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>Staying Power </li>
+        <li>Dancer </li>
+        <li>Back Chat </li>
+        <li>Body Language  </li>
+        <li>Action This Day  </li>
+        <li>Put Out The Fire </li>
+        <li>Life Is Real </li>
+        <li>Calling All Girls </li>
+        <li>Las Palabras De Amor </li>
+        <li>Cool Cat </li>
+        <li>Under Pressure </li>
+    </ol>
+
+    <b>12. A Kind Of Magic</b> (Elektra 1986)<br>
+    <img src="photos/Albums/Queen12.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>One Vision </li>
+        <li> A Kind Of Magic </li>
+        <li> One Year Of Love </li>
+        <li>Pain Is So Close to Pleasure </li>
+        <li>Friends Will Be Friends </li>
+        <li>Who Wants To Live Forever </li>
+        <li>Gimme The Prize </li>
+        <li>Don't Lose Your Head </li>
+        <li>Princes Of The Universe </li>
+    </ol>
+
+    <b>13. The Miracle</b> (Elektra 1989)<br>
+    <img src="photos/Albums/Queen13.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>Party </li>
+        <li>Khashoggis Ship </li>
+        <li>The Miracle </li>
+        <li>I Want It All </li>
+        <li>The Invisible Man </li>
+        <li>Breakthrou </li>
+        <li>Rain Must Fall </li>
+        <li>Scandal </li>
+        <li>My Baby Does Me </li>
+        <li>Was It All Worth It</li>
+    </ol>
+
+    <b>	15. Made In Heaven</b>  (Parlophone 1995)<br>
+    <img src="photos/Albums/Queen15.jfif"><br>
+    Playlist:
+
+    <ol>
+        <li>It's A Beautiful Day </li>
+        <li>Made In Heaven </li>
+        <li>Let Me Live </li>
+        <li>Mother Love </li>
+        <li>My Life Has Been Saved </li>
+        <li>I Was Born To Love You </li>
+        <li>Heaven For Everyone </li>
+        <li>Too Much Love Will Kill You </li>
+        <li>You Don't Fool Me </li>
+        <li>A Winter's Tale </li>
+        <li>It's A Beautiful Day </li>
+    </ol>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <footer>
+        <p1>
+            The Official International Queen Fan Club | P.O.Box 77 | Poria - Neve Oved | Harakafot St. 48 | <a align="center" href="tel:+972528341543">(+972)834-1543</a>
+        </p1>
+    </footer>
+    <a href="#Top"> Go Back to the Top </a><br>
+
+</body>
+</html>
